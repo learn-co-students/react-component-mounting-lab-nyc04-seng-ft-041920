@@ -11,13 +11,10 @@ class App extends Component {
 
 
   //Your code here:
-
-
-
-
-
-
-
+  componentDidMount(){
+    this.handleAddTimer()
+    console.log(this.state)
+  }
 
 
   // No need to modify anything in render or the class methods below
@@ -39,6 +36,7 @@ class App extends Component {
 
   // returns array of components written in JSX, mapped from this.state.timerIDs
   renderTimers = () => this.state.timerIDs.map(id => {
+    console.log(this.state.timerIDs)
     return <Timer key={id} id={id} removeTimer={this.removeTimer} />
   })
 
